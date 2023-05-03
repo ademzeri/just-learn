@@ -1,26 +1,16 @@
 import { useState } from 'react'
 import './App.css'
-import Header from './components/Header'
-import Home from './components/Home'
-import Cours from "./components/Cours"
-import Contact from './components/Contact'
-import Subjects from './components/Subjects'
-import {Route,Routes } from 'react-router-dom'
+import Header from './components/Layout/Header'
+import Footer from "./components/Layout/Footer"
+import AnimatedRoutes from './components/Layout/AnimatedRoutes'
 
 
 function App() {
-
   return (
-    <div className='h-screen'>
+    <div className='flex flex-col h-screen'>
     <Header/>
-    <Routes>
-      <Route path='/' element={<Home/>}></Route>
-      <Route path="/Cours" element={<Cours/>}></Route>
-      <Route path="/cours/subjects" element={<Subjects />}></Route>
-
-      <Route path="propos" element={<Cours/>}></Route>
-      <Route path="contact" element={<Contact/>}></Route>
-    </Routes>
+    <AnimatedRoutes/>
+    <Footer/>
     </div>
   )
 }

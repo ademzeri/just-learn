@@ -1,5 +1,0 @@
-{
-    'sept': {
-        'title': 'Septembre',
-    }
-}
